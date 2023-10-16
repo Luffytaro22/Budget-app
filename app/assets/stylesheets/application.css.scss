@@ -1,1 +1,18 @@
 @import 'font-awesome';
+@import 'forms';
+@import 'fonts';
+@import 'splash_screen';
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Proxima Nova Light, sans-serif;
+}
+
+h1 {
+  font-family: Proxima Nova Bold;
+}
+
+a {
+  text-decoration: none;
+}
