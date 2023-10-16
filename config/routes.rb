@@ -4,5 +4,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root to: "home#index"
-  # root "articles#index"
+  
+  # Routes for the categories and transaction pages.
+  resources :groups, only: [:index, :show, :new, :create] do
+    resources :purchases, only: [:index, :new, :create]
+  end
 end
