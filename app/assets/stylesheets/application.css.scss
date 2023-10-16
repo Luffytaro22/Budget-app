@@ -17,3 +17,21 @@ a {
   text-decoration: none;
   color: white;
 }
+
+.notice,
+.alert {
+  position: fixed;
+  top: 93%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.notice {
+  background-color: green;
+}
+
+.alert {
+  background-color: red;
+}
