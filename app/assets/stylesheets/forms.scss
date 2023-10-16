@@ -1,0 +1,50 @@
+.login-bar {
+  display: flex;
+  background-color: #3778c2;
+  width: 100%;
+  padding: 10px 10px;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+  gap: 25%;
+}
+
+.login-title {
+  font-family: Proxima Nova Bold, sans-serif, arial, serif;
+}
+
+.submit {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1em;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+}
+
+.inputs {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgb(184, 184, 184);
+}
+
+.splash-section > .new_user {
+  width: 100%;
+  margin-top: 20px;
+  max-width: 425px;
+}
+
+.forgot-password {
+  margin-top: 20px;
+  color: #828584;
+}
+
+#reset-password-submit {
+  background: #3778c2;
+  border: none;
+  padding: 10px;
+  color: white;
+  margin-top: 20px;
+}
