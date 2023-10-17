@@ -8,13 +8,15 @@
   <div class="div-flex">
 		<% @groups.each do |group| %>
 			<div class="category">
-				<%= link_to group_purchases_path(group) do %>
-					<img src=<%= group.icon %>></img>
-					<div>
-						<%= group.name %>
-						<%= group.created_at %>
+				<%= link_to group_purchases_path(group), class: "flex-row-center group-links" do %>
+					<div class="flex-row-center img-title">
+						<img src="<%= group.icon %>", class="images"></img>
+						<div>
+							<h3 class="login-title"><%= group.name %></h3></br>
+							<p style="font-size: 0.8em;"><%= group.created_at.strftime('%d %b %Y') %></p>
+						</div>
 					</div>
-					<%= group.sum_amount %>
+					<strong>$<%= group.sum_amount %></strong>
 				<% end %>
 			</div>
 		<% end %>
