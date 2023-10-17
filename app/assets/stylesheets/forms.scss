@@ -38,7 +38,8 @@
   border: 1px solid rgb(184, 184, 184);
 }
 
-.splash-section > .new_user {
+.splash-section > .new_user,
+.categories-form {
   width: 100%;
   margin-top: 20px;
   max-width: 425px;
@@ -55,4 +56,26 @@
   padding: 10px;
   color: white;
   margin-top: 20px;
+}
+
+.categories-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photos-scroll-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 320px;
+  overflow-y: auto;
+  margin-top: 30px;
+  gap: 20px;
+  align-self: center;
+}
+
+.images-categories {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
 }

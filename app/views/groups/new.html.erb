@@ -1,0 +1,27 @@
+<div class="splash-section">
+  <div class="login-bar" style="position: relative;">
+    <%= link_to groups_path do %>
+      <i class="fa-solid fa-arrow-left", style="font-size: 1.6em;"></i>
+    <% end %>
+    <h2 class="login-title">CATEGORY</h2>
+  </div>
+
+  <%= form_with(model: @group, url: groups_path, html: { class: 'categories-form' }) do |f| %>
+    <div class="field">
+      <%= f.text_field :name, placeholder: 'Name', autofocus: true, required: true, class: 'inputs' %>
+    </div>
+
+    <div class="photos-scroll-container">
+    	<% @photos.each do |photo| %>
+    		<div onclick="this.querySelector('input').checked = true">
+					<img src="<%= photo %>", class="images-categories"></img>
+					<%= f.radio_button :icon, photo %>
+    		</div>
+    	<% end %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "ADD", class: "submit" %>
+    </div>
+  <% end %>
+</div>
