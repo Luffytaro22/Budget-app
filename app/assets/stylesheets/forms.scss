@@ -1,4 +1,5 @@
-.login-bar {
+.login-bar,
+.home-bar {
   display: flex;
   background-color: #3778c2;
   width: 100%;
@@ -6,7 +7,14 @@
   align-items: center;
   color: white;
   box-sizing: border-box;
+}
+
+.login-bar {
   gap: 25%;
+}
+
+.home-bar {
+  justify-content: space-between;
 }
 
 .login-title {
