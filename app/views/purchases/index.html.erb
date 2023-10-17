@@ -1,0 +1,39 @@
+<div class="splash-section">
+	<div class="home-bar">
+		<%= link_to groups_path do %>
+      <i class="fa-solid fa-arrow-left", style="font-size: 1.6em;"></i>
+    <% end %>
+    <h2 class="login-title">TRANSACTIONS</h2>
+    <i class="fa-solid fa-magnifying-glass", style="font-size: 1.6em;"></i>
+  </div>
+  <% if can? :read, @group  %>
+		<div class="total-amount">
+			<p>Total amount</p>
+			<p><strong>$<%= @group.sum_amount %></strong></p>
+		</div>
+  <% end %>
+  <div class="div-flex">
+		<% @purchases.each do |purchase| %>
+			<% if can? :read, purchase %>
+				<div class="category">
+					<div class="flex-row-center group-links">
+						<div class="flex-row-center img-title">
+							<img src="<%= @group.icon %>", class="images"></img>
+							<div>
+								<h3 class="login-title"><%= purchase.name %></h3></br>
+								<p style="font-size: 0.8em;"><%= purchase.created_at.strftime('%d %b %Y') %></p>
+							</div>
+						</div>
+						<strong>$<%= purchase.amount %></strong>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+  </div>
+  <div class="add-bottom-form">
+  	<%= link_to new_group_purchase_path(@group), class: 'add-bottom-form-link' do %>
+			<i class="fa-solid fa-plus"></i>
+			<h3 class="login-title", style="font-size: 1em;">NEW TRANSACTION</h3>
+		<% end %>
+  </div>
+</div>

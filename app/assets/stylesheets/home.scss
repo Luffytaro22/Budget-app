@@ -1,0 +1,57 @@
+.add-bottom-form {
+  margin-top: auto;
+  background-color: #56a323;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.add-bottom-form-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #fcfbfa;
+  padding: 10px 60px;
+  border-radius: 5px;
+}
+
+.images {
+  width: 80px;
+  height: 80px;
+}
+
+.flex-row-center {
+  display: flex;
+}
+
+.img-title {
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.group-links {
+  color: black;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.category {
+  background-color: #fcfbfa;
+  padding: 10px 0;
+  width: 90%;
+  box-shadow: 0 0 5px 1px gray;
+  border-radius: 5px;
+}
+
+.div-flex {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 425px;
+  align-items: center;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
