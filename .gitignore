@@ -32,3 +32,6 @@
 
 # Ignore modules.
 node_modules/
+
+# Ignore WebStorm ideas.
+.idea/
