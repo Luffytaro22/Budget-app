@@ -1,7 +1,7 @@
-<%= button_to 'Sign out', destroy_user_session_path, method: 'delete' %>
 <div class="splash-section">
+	<%= render 'side_menu' %>
 	<div class="home-bar">
-		<i class="fa-solid fa-bars", style="font-size: 1.6em;"></i>
+		<i class="fa-solid fa-bars", style="font-size: 1.6em;", onclick="document.querySelector('.side-menu').style.display = 'block'"></i>
     <h2 class="login-title">CATEGORIES</h2>
     <i class="fa-solid fa-magnifying-glass", style="font-size: 1.6em;"></i>
   </div>
