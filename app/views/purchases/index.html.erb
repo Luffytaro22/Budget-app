@@ -6,24 +6,28 @@
     <h2 class="login-title">TRANSACTIONS</h2>
     <i class="fa-solid fa-magnifying-glass", style="font-size: 1.6em;"></i>
   </div>
-  <div class="total-amount">
-		<p>Total amount</p>
-		<p><strong>$<%= @group.sum_amount %></strong></p>
-  </div>
+  <% if can? :read, @group  %>
+		<div class="total-amount">
+			<p>Total amount</p>
+			<p><strong>$<%= @group.sum_amount %></strong></p>
+		</div>
+  <% end %>
   <div class="div-flex">
 		<% @purchases.each do |purchase| %>
-			<div class="category">
-				<div class="flex-row-center group-links">
-					<div class="flex-row-center img-title">
-						<img src="<%= @group.icon %>", class="images"></img>
-						<div>
-							<h3 class="login-title"><%= purchase.name %></h3></br>
-							<p style="font-size: 0.8em;"><%= purchase.created_at.strftime('%d %b %Y') %></p>
+			<% if can? :read, purchase %>
+				<div class="category">
+					<div class="flex-row-center group-links">
+						<div class="flex-row-center img-title">
+							<img src="<%= @group.icon %>", class="images"></img>
+							<div>
+								<h3 class="login-title"><%= purchase.name %></h3></br>
+								<p style="font-size: 0.8em;"><%= purchase.created_at.strftime('%d %b %Y') %></p>
+							</div>
 						</div>
+						<strong>$<%= purchase.amount %></strong>
 					</div>
-					<strong>$<%= purchase.amount %></strong>
 				</div>
-			</div>
+			<% end %>
 		<% end %>
   </div>
   <div class="add-bottom-form">
