@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
 	before_action :groups_by_current_user, only: [:new, :create]
+	before_action :load_photos, only: :new
 
   def index
     @groups = current_user.groups
@@ -11,12 +12,6 @@ class GroupsController < ApplicationController
 
   def create
   	group = @groups.new(group_params)
-  	uploaded_io = params[:group][:icon]
-      File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-        file.write(uploaded_io.read)
-      end
-
-    group.icon = '/uploads/' + uploaded_io.original_filename
   	if group.save
   		flash[:notice] = 'The Category was created successfully!'
   		redirect_to groups_path
@@ -34,5 +29,23 @@ class GroupsController < ApplicationController
 
   def groups_by_current_user
   	@groups = current_user.groups
+  end
+
+  def load_photos
+  	@photos = [
+      		"https://n9.cl/mgn495",
+      		"https://n9.cl/yko32",
+      		"https://n9.cl/z3rxl",
+      		"https://n9.cl/cxg32",
+    			"https://n9.cl/qmb20",
+    			"https://n9.cl/ysy5f",
+    			"https://n9.cl/1orfm",
+    			"https://n9.cl/60zpm",
+    			"https://n9.cl/v4c05",
+    			"https://n9.cl/nrm4c",
+    			"https://n9.cl/nufqes",
+    			"https://n9.cl/agfch",
+    			"https://n9.cl/rwoyb"
+      	]
   end
 end
