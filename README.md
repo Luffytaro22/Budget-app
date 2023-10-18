@@ -1,9 +1,5 @@
 <a id="readme-top"></a>
 
-<div align="center">
-  <h1><b>Recipe App | Ruby on Rails</b></h1>
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -36,6 +32,9 @@
 The **Budget App** is a mobile web application build on Ruby on Rails where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 The design was made based on the <a href="https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding">Snapscan</a> layout made by <a href="https://www.behance.net/gregoirevella">Gregoire Vella on Behance</a>.
+
+# 🎥 Presentation video
+* [Follow this link](https://drive.google.com/file/d/1sYThPupwEd6hsfnNaWhBPLvemaGte41G/view?usp=sharing)
 
 ## 🛠 Built With <a id="built-with"></a>
 
