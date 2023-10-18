@@ -13,12 +13,14 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Usage](#usage)
     - [Install](#install)
     - [Run tests](#run-tests)
+    - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -70,6 +72,13 @@ The design was made based on the <a href="https://www.behance.net/gallery/197591
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+* <a href="https://budget-app-8wpl.onrender.com/">Live demo link</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -123,6 +132,11 @@ rspec
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Deployment
+You can deploy this project from the following link:
+* <a href="https://budget-app-8wpl.onrender.com/">Live demo link</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- AUTHORS -->
 
 ## 👥 Authors <a id="authors"></a>
