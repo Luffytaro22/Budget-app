@@ -59,6 +59,17 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+
+  gem 'rspec-rails'
+
+  gem 'capybara'
+
+  # The following gem is used for Capybara to interact with the browser.
+  gem 'webdrivers'
+
+  gem 'factory_bot_rails'
+
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -70,17 +81,4 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-end
-
-group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-
-  gem 'rspec-rails'
-
-  gem 'capybara'
-
-  # The following gem is used for Capybara to interact with the browser.
-  gem 'webdrivers'
-
-  gem 'factory_bot_rails'
 end
