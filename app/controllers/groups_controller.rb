@@ -3,7 +3,7 @@ class GroupsController < ApplicationController
   before_action :load_photos, only: :new
 
   def index
-    @groups = current_user.groups
+    @groups = current_user.groups.includes(:purchases)
   end
 
   def new
