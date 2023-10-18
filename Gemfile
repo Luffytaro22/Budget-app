@@ -68,6 +68,8 @@ group :development, :test do
   gem 'webdrivers'
 
   gem 'factory_bot_rails'
+
+  gem 'rails-controller-testing'
 end
 
 group :development do
