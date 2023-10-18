@@ -1,17 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe 'Groups', type: :request do
-	# Request to: /groups
-	describe 'GET /index' do
-		# The user logged in before run the tests
-		before do
-			user = FactoryBot.create(:user)
-			FactoryBot.create(:group, user: user)
-			sign_in user
-			get groups_path
-		end
+  # Request to: /groups
+  describe 'GET /index' do
+    # The user logged in before run the tests
+    before do
+      user = FactoryBot.create(:user)
+      FactoryBot.create(:group, user:)
+      sign_in user
+      get groups_path
+    end
 
-		# test if the response status was correct (status 200)
+    # test if the response status was correct (status 200)
     it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
@@ -23,23 +23,23 @@ RSpec.describe 'Groups', type: :request do
 
     # test if the response body includes the correct content.
     it 'renders the index template with the correct content' do
-    	expected_result = 'CATEGORIES'
-    	expect(response.body).to include(expected_result)
+      expected_result = 'CATEGORIES'
+      expect(response.body).to include(expected_result)
 
-    	expected_result_group = 'Food'
-    	expect(response.body).to include(expected_result_group)
+      expected_result_group = 'Food'
+      expect(response.body).to include(expected_result_group)
     end
-	end
+  end
 
-	# request to: /groups/new
-	describe 'GET /new' do
-		before do
-			user = FactoryBot.create(:user)
-			sign_in user
-			get new_group_path
-		end
+  # request to: /groups/new
+  describe 'GET /new' do
+    before do
+      user = FactoryBot.create(:user)
+      sign_in user
+      get new_group_path
+    end
 
-		# test if the response status was correct (status 200)
+    # test if the response status was correct (status 200)
     it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
@@ -57,5 +57,5 @@ RSpec.describe 'Groups', type: :request do
       expected_result_button = 'ADD'
       expect(response.body).to include(expected_result_button)
     end
-	end
+  end
 end
