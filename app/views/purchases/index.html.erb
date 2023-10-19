@@ -12,7 +12,7 @@
 			<p><strong>$<%= @group.sum_amount %></strong></p>
 		</div>
   <% end %>
-  <div class="div-flex">
+  <div class="div-flex", style="margin-top: 10px; max-height: calc(100vh - 50px - 60px - 70px);">
 		<% @purchases.each do |purchase| %>
 			<% if can? :read, purchase %>
 				<div class="category">
