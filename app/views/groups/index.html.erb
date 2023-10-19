@@ -1,0 +1,30 @@
+<div class="splash-section">
+	<%= render 'side_menu' %>
+	<div class="home-bar">
+		<i class="fa-solid fa-bars", style="font-size: 1.6em;", onclick="document.querySelector('.side-menu').style.display = 'block'"></i>
+    <h2 class="login-title">CATEGORIES</h2>
+    <i class="fa-solid fa-magnifying-glass", style="font-size: 1.6em;"></i>
+  </div>
+  <div class="div-flex">
+		<% @groups.each do |group| %>
+			<div class="category">
+				<%= link_to group_purchases_path(group), class: "flex-row-center group-links" do %>
+					<div class="flex-row-center img-title">
+						<img src="<%= group.icon %>", class="images"></img>
+						<div>
+							<h3 class="login-title"><%= group.name %></h3></br>
+							<p style="font-size: 0.8em;"><%= group.created_at.strftime('%d %b %Y') %></p>
+						</div>
+					</div>
+					<strong>$<%= group.sum_amount %></strong>
+				<% end %>
+			</div>
+		<% end %>
+  </div>
+  <div class="add-bottom-form">
+  	<%= link_to new_group_path, class: 'add-bottom-form-link' do %>
+			<i class="fa-solid fa-plus"></i>
+			<h3 class="login-title">NEW CATEGORY</h3>
+		<% end %>
+  </div>
+</div>

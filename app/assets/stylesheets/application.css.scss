@@ -1,0 +1,41 @@
+@import 'font-awesome';
+@import 'forms';
+@import 'fonts';
+@import 'splash_screen';
+@import 'home';
+@import 'purchases';
+@import 'side_menu';
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Proxima Nova Light, sans-serif, arial, serif;
+}
+
+h1 {
+  font-family: Proxima Nova Bold, sans-serif, arial, serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.notice,
+.alert {
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  top: 93%;
+  box-sizing: border-box;
+}
+
+.notice {
+  background-color: green;
+}
+
+.alert {
+  background-color: red;
+}
