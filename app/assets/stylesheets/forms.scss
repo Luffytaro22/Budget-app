@@ -7,7 +7,6 @@
   align-items: center;
   color: white;
   box-sizing: border-box;
-  position: fixed;
 }
 
 .login-bar {
@@ -16,6 +15,7 @@
 
 .home-bar {
   justify-content: space-between;
+  position: fixed;
 }
 
 .login-title {
