@@ -7,6 +7,7 @@
   align-items: center;
   color: white;
   box-sizing: border-box;
+  position: fixed;
 }
 
 .login-bar {
@@ -67,11 +68,11 @@
 .photos-scroll-container {
   display: flex;
   flex-direction: column;
-  max-height: 320px;
   overflow-y: auto;
   margin-top: 30px;
   gap: 20px;
   align-self: center;
+  max-height: calc(100vh - 60px - 30px - 20px - 40px);
 }
 
 .images-categories {

@@ -5,6 +5,8 @@
   display: flex;
   justify-content: center;
   padding: 10px 0;
+  position: fixed;
+  bottom: 0;
 }
 
 .add-bottom-form-link {
@@ -19,6 +21,7 @@
 .images {
   width: 80px;
   height: 80px;
+  border-radius: 5px;
 }
 
 .flex-row-center {
@@ -32,8 +35,9 @@
 
 .group-links {
   color: black;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
 
 .category {
@@ -45,13 +49,13 @@
 }
 
 .div-flex {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 425px;
   align-items: center;
   gap: 10px;
-  max-height: 400px;
   overflow-y: scroll;
+  max-height: calc(100vh - 50px - 60px - 10px);
+  margin-top: 55px;
 }

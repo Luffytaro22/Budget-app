@@ -6,7 +6,7 @@
     <h2 class="login-title">TRANSACTION</h2>
   </div>
 
-  <%= form_with(model: @purchase, url: group_purchases_path(@group), html: { class: 'categories-form' }) do |f| %>
+  <%= form_with(model: @purchase, url: group_purchases_path(@group), html: { class: 'categories-form', style: 'gap: 20px;' }) do |f| %>
     <div class="field">
       <%= f.text_field :name, placeholder: 'Name', autofocus: true, required: true, class: 'inputs' %>
     </div>

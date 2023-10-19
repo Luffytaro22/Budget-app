@@ -4,9 +4,11 @@
 
 .side-menu {
   position: absolute;
+  z-index: 999;
   width: 70%;
   left: 0;
-  background-color: rgb(55, 120, 194);
+  background: linear-gradient(45deg, rgb(11, 58, 111), rgba(55, 120, 194, 0.7));
+  backdrop-filter: blur(10px);
   height: 100vh;
   padding: 20px 20px;
   box-sizing: border-box;
@@ -27,13 +29,13 @@
 }
 
 .log-out {
-  background: red;
-  border: none;
+  background: #56a323;
+  border: 1px solid white;
   color: white;
   font-size: 1em;
-  padding: 5px 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px 1px white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-family: 'Proxima Nova Bold', sans-serif, arial, serif;
 }
 
 @keyframes side-menu {

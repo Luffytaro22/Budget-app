@@ -1,7 +1,10 @@
 <div class="side-menu hide">
 	<i class="fa-solid fa-x", style="font-size: 1.6em;", onclick="document.querySelector('.side-menu').style.display = 'none'"></i>
 	<div class="flex-column">
-		<p><%= current_user.name %></p>
+		<div style="text-align: center;">
+			<img class="images", style="border-radius: 50%;" src="https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small/profile-icon-design-free-vector.jpg"></img>
+			<p class="login-title", style="font-size: 1.3em;"><%= current_user.name %></p>
+		</div>
 		<%= button_to 'Sign out', destroy_user_session_path, method: 'delete', class: 'log-out' %>
 	</div>
 </div>
