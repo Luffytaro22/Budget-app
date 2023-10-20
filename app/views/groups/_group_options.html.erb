@@ -1,0 +1,10 @@
+<div class="modify-remove hide">
+	<%= button_to edit_group_path(group), method: :get do %>
+		<i class="fa-solid fa-pen-to-square"></i>
+		EDIT
+	<% end %>
+	<%= button_to group_path(group), method: :delete do %>
+		<i class="fa-solid fa-trash-can"></i>
+		REMOVE
+	<% end %>
+</div>

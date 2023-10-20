@@ -6,9 +6,11 @@
     <i class="fa-solid fa-magnifying-glass", style="font-size: 1.6em;"></i>
   </div>
   <div class="div-flex">
-		<% @groups.each do |group| %>
+		<% @groups.each_with_index do |group, index| %>
 			<div class="category">
-				<i class="fa-solid fa-ellipsis-vertical", style="font-size: 1.6em;"></i>
+				<i class="fa-solid fa-ellipsis-vertical", style="font-size: 1.6em;">
+					<%= render partial: 'group_options', locals: { group: group } %>
+				</i>
 				<%= link_to group_purchases_path(group), class: "flex-row-center group-links" do %>
 					<div class="flex-row-center img-title">
 						<img src="<%= group.icon %>", class="images"></img>
