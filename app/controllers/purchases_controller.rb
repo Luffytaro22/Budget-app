@@ -1,6 +1,6 @@
 class PurchasesController < ApplicationController
-  before_action :find_purchases, only: %i[new create]
-  before_action :find_group, only: %i[index new]
+  before_action :find_purchases, only: %i[new create edit update destroy]
+  before_action :find_group, only: %i[index new edit update destroy]
 
   def index
     @purchases = @group.purchases.order(created_at: :asc)
@@ -25,6 +25,37 @@ class PurchasesController < ApplicationController
       flash[:alert] = purchase.errors.full_messages.join(', ')
       redirect_to request.referrer
     end
+  end
+
+  def edit
+  	@purchase = @purchases.find_by(id: params[:id])
+  end
+
+  def update
+  	purchase = @purchases.find_by(id: params[:id])
+
+  	if purchase.update(
+  			name: purchase_params[:name],
+  			amount: purchase_params[:amount]
+  		)
+  		flash[:notice] = 'The Transaction was modified successfully!'
+      redirect_to group_purchases_path(@group)
+    else
+    	flash[:alert] = purchase.errors.full_messages.join(', ')
+      redirect_to request.referrer
+    end
+  end
+
+  def destroy
+  	purchase = @purchases.find_by(id: params[:id])
+
+  	if purchase.destroy
+  		flash[:notice] = 'The Transaction was removed successfully!'
+  		redirect_to group_purchases_path(@group)
+  	else
+  		flash[:alert] = 'The Transaction was not removed!'
+      redirect_to request.referrer
+  	end
   end
 
   private
