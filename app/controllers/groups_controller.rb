@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
-  before_action :groups_by_current_user, only: %i[new create]
-  before_action :load_photos, only: :new
+  before_action :groups_by_current_user, only: %i[new create edit update destroy]
+  before_action :load_photos, only: [:new, :edit]
 
   def index
     @groups = current_user.groups.includes(:purchases)
@@ -19,6 +19,33 @@ class GroupsController < ApplicationController
       flash[:alert] = group.errors.full_messages.join(', ')
       redirect_to request.referrer
     end
+  end
+
+  def edit
+		@group = @groups.find_by(id: params[:id])
+  end
+
+  def update
+		group = @groups.find_by(id: params[:id])
+
+		if group.update(group_params)
+			flash[:notice] = 'The Category was modified successfully!'
+			redirect_to groups_path
+		else
+			flash[:alert] = group.errors.full_messages.join(', ')
+			redirect_to request.referrer
+		end
+  end
+
+  def destroy
+  	group = @groups.find_by(id: params[:id])
+  	if group.destroy
+  		flash[:notice] = 'The Category was removed successfully!'
+  		redirect_to groups_path
+  	else
+  		flash[:alert] = 'The Category was not removed!'
+  		redirect_to request.referrer
+  	end
   end
 
   private
