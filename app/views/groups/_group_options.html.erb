@@ -1,9 +1,10 @@
 <div class="modify-remove hide">
-	<%= button_to edit_group_path(group), method: :get do %>
+	<i class="fa-solid fa-x", style="align-self: end; color: white;"></i>
+	<%= button_to edit_group_path(group), method: :get, class: 'buttons edit' do %>
 		<i class="fa-solid fa-pen-to-square"></i>
 		EDIT
 	<% end %>
-	<%= button_to group_path(group), method: :delete do %>
+	<%= button_to group_path(group), method: :delete, class: 'buttons remove' do %>
 		<i class="fa-solid fa-trash-can"></i>
 		REMOVE
 	<% end %>

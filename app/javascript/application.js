@@ -57,9 +57,11 @@ document.addEventListener('turbo:load', () => {
 // Prevent clicking on the 'a' elements.
 window.addEventListener('click', (event) => {
   const modifyRemoveElement = document.querySelector('.modify-remove.show');
+  const closeIcon = document.querySelector('.modify-remove.show > .fa-solid.fa-x');
+
   if (modifyRemoveElement && event.target.closest('.flex-row-center.group-links')) {
     event.preventDefault();
-  } else if (modifyRemoveElement && !event.target.closest('.fa-solid.fa-ellipsis-vertical')) {
+  } else if (modifyRemoveElement && !event.target.closest('.fa-solid.fa-ellipsis-vertical') || modifyRemoveElement && event.target === closeIcon) {
     modifyRemoveElement.classList.remove('show');
     modifyRemoveElement.classList.add('hide');
   }
