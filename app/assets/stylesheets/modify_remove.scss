@@ -1,7 +1,7 @@
 .modify-remove {
   flex-direction: column;
   width: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 910;
   background: linear-gradient(45deg, rgb(11, 58, 111), rgba(55, 120, 194, 0.7));
   backdrop-filter: blur(10px);
