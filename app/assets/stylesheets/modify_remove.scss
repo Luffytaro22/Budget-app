@@ -1,0 +1,50 @@
+.modify-remove {
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  z-index: 910;
+  background: linear-gradient(45deg, rgb(11, 58, 111), rgba(55, 120, 194, 0.7));
+  backdrop-filter: blur(10px);
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  height: 30vh;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  box-sizing: border-box;
+  animation-name: options;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+.modify-remove.show {
+  display: flex;
+}
+
+.buttons {
+  border: none;
+  border-radius: 0 10px 10px 10px;
+  color: white;
+  font-family: 'Proxima Nova Bold', sans-serif, arial;
+}
+
+.buttons.edit {
+  background-color: whitesmoke;
+  color: black;
+  padding: 10px 30px;
+}
+
+.buttons.remove {
+  background-color: red;
+  padding: 10px 20px;
+}
+
+@keyframes options {
+  from {
+    transform: translateY(30%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
