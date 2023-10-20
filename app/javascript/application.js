@@ -2,7 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-document.addEventListener("turbo:submit-end", function() {
+document.addEventListener("turbo:load", function() {
     const alert = document.querySelector('.alert');
     const notice = document.querySelector('.notice');
 
