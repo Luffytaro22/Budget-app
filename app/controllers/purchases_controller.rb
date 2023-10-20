@@ -28,34 +28,34 @@ class PurchasesController < ApplicationController
   end
 
   def edit
-  	@purchase = @purchases.find_by(id: params[:id])
+    @purchase = @purchases.find_by(id: params[:id])
   end
 
   def update
-  	purchase = @purchases.find_by(id: params[:id])
+    purchase = @purchases.find_by(id: params[:id])
 
-  	if purchase.update(
-  			name: purchase_params[:name],
-  			amount: purchase_params[:amount]
-  		)
-  		flash[:notice] = 'The Transaction was modified successfully!'
+    if purchase.update(
+      name: purchase_params[:name],
+      amount: purchase_params[:amount]
+    )
+      flash[:notice] = 'The Transaction was modified successfully!'
       redirect_to group_purchases_path(@group)
     else
-    	flash[:alert] = purchase.errors.full_messages.join(', ')
+      flash[:alert] = purchase.errors.full_messages.join(', ')
       redirect_to request.referrer
     end
   end
 
   def destroy
-  	purchase = @purchases.find_by(id: params[:id])
+    purchase = @purchases.find_by(id: params[:id])
 
-  	if purchase.destroy
-  		flash[:notice] = 'The Transaction was removed successfully!'
-  		redirect_to group_purchases_path(@group)
-  	else
-  		flash[:alert] = 'The Transaction was not removed!'
+    if purchase.destroy
+      flash[:notice] = 'The Transaction was removed successfully!'
+      redirect_to group_purchases_path(@group)
+    else
+      flash[:alert] = 'The Transaction was not removed!'
       redirect_to request.referrer
-  	end
+    end
   end
 
   private
