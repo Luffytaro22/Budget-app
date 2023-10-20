@@ -16,6 +16,7 @@
 		<% @purchases.each do |purchase| %>
 			<% if can? :read, purchase %>
 				<div class="category">
+					<i class="fa-solid fa-ellipsis-vertical", style="font-size: 1.6em;"></i>
 					<div class="flex-row-center group-links">
 						<div class="flex-row-center img-title">
 							<img src="<%= @group.icon %>", class="images"></img>
