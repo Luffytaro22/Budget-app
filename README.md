@@ -75,7 +75,7 @@ The design was made based on the <a href="https://www.behance.net/gallery/197591
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-* <a href="https://budget-app-8wpl.onrender.com/">Live demo link</a>
+* <a href="https://budget--track-10214d6fe65e.herokuapp.com/">Live demo link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,7 +133,7 @@ rspec
 
 ### Deployment
 You can deploy this project from the following link:
-* <a href="https://budget-app-8wpl.onrender.com/">Live demo link</a>
+* <a href="https://budget--track-10214d6fe65e.herokuapp.com/">Live demo link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- AUTHORS -->
