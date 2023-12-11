@@ -6,6 +6,7 @@
   position: absolute;
   z-index: 999;
   width: 70%;
+  max-width: 20rem;
   left: 0;
   background: linear-gradient(45deg, rgb(11, 58, 111), rgba(55, 120, 194, 0.7));
   backdrop-filter: blur(10px);
